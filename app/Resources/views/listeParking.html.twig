@@ -10,10 +10,9 @@
         {% for parking in parkingList %}
             <p>{{parking.id}} - {{parking.nom}} - {{parking.adresse}} - {{parking.code}} - {{parking.pays}} - {{parking.latitude}} - {{parking.longitude}}</p>
         {% endfor %}
-        <div id="menu">
-            <ul id="onglets">
-                <li class="active"><a href="listeParking.html.twig.html/liste"> Liste des parkings </a></li>
-                <li><a href="addParking.html.twig/formulaire"> Ajouter un parking </a></li>
+        <div>
+            <ul>
+                <li><a href={{ path('formulaire') }}> Ajouter un parking </a></li>
             </ul>
         </div>
     </body>

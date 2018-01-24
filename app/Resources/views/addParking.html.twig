@@ -10,10 +10,9 @@
         {{ form_widget(form) }}
         <button type="submit">Valider</button>
         {{ form_end(form) }}
-        <div id="menu">
-            <ul id="onglets">
-                <li class="active"><a href="addParking.html.twig.html/formulaire"> Ajouter un parking </a></li>
-                <li><a href="listeParking.html.twig/liste"> Liste des parkings </a></li>
+        <div>
+            <ul>
+                <li><a href={{ path('liste') }}> Liste des parkings </a></li>
             </ul>
         </div>
     </body>

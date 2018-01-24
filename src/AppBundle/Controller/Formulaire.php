@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 class Formulaire extends Controller
 {
     /**
-     * @Route("/formulaire")
+     * @Route("/formulaire", name="formulaire")
      */
     public function addParking(Request $request)
     {

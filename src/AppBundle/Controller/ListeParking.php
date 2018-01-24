@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ListeParking extends Controller
 {
     /**
-     * @Route("/liste")
+     * @Route("/liste", name="liste")
      */
     public function getListe()
     {
