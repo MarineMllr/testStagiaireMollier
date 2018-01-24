@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajouter un Parking</title>
+    </head>
+    <body>
+        <!-- l'attribut novalidate permet d'améliorer l'expérience côté utilisateur en supprimant le panneau "veuillez renseigner ce formulaire" généré automatiquement , on préfèrera les assert dans l'entité Parking-->
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_widget(form) }}
+        <button type="submit">Valider</button>
+        {{ form_end(form) }}
+        <div id="menu">
+            <ul id="onglets">
+                <li class="active"><a href="addParking.html.twig.html/formulaire"> Ajouter un parking </a></li>
+                <li><a href="listeParking.html.twig/liste"> Liste des parkings </a></li>
+            </ul>
+        </div>
+    </body>
+</html>

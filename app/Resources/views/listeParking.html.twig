@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Liste des Parkings</title>
+    </head>
+    <body>
+        <h2>Liste des parkings disponibles</h2>
+        <!-- tableau d'objet Parking donc on fait une boucle -->
+        {% for parking in parkingList %}
+            <p>{{parking.id}} - {{parking.nom}} - {{parking.adresse}} - {{parking.code}} - {{parking.pays}} - {{parking.latitude}} - {{parking.longitude}}</p>
+        {% endfor %}
+        <div id="menu">
+            <ul id="onglets">
+                <li class="active"><a href="listeParking.html.twig.html/liste"> Liste des parkings </a></li>
+                <li><a href="addParking.html.twig/formulaire"> Ajouter un parking </a></li>
+            </ul>
+        </div>
+    </body>
+</html>
