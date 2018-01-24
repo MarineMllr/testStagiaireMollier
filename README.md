@@ -16,18 +16,19 @@ Ce planning présentera à termes les fonctionnalités suivantes:
 Les dépendances seront installées lors de la configuration du projet, et sont accessibles à partir des fichiers composer.json. Voici les principales dépendances que le projet utilise:
 
 - composer: *latest*,
-- PHP: ≥ *7.2*,
-- Symfony: *1.0*
+- PHP: ≥ *5.3.9*,
+- Symfony: *3.0*
+- MySQL: *5.7.19*
 
 ### Faire tourner le projet
 
-#### Wamp Server
+#### wamp Server
 
-Pour ce test, j'ai fais le choix d'opter pour Wamp pour héberger en localhost mon site web. Si vous désirez faire de même, télécharger Wamp et placer le projet qui se trouve dans mon dépôt Github dans le dossier C:\wamp64\www\
+Pour ce test, j'ai fait le choix d'opter pour Wamp pour héberger en localhost mon site web. Si vous désirez faire de même, télécharger Wamp et placer le projet qui se trouve dans mon dépôt Github dans le dossier C:\wamp\www\
 
 #### composer
 
-Pour commencer, notre projet a des « dépendances ». Elles doivent être chargées au travers des gestionnaires dont le projet a besoin. Nous devons ainsi lancer les commandes suivantes:
+Pour commencer, notre projet a des « dépendances ». Elles doivent être chargées au travers des gestionnaires dont le projet a besoin. Nous devons ainsi lancer les commandes suivantes sur le cmd (en se  plaçant au préalable dans le dossier du projet):
 
 ```
 php composer.phar install
@@ -48,3 +49,13 @@ Une fois cela fait, vous n'avez plus qu'à créer votre base de données à part
 ```
 php app/console doctrine:database:create
 ```
+### accès à mon projet
+
+Vous n'avez plus qu'à vous rendre sur votre navigateur web puis de saisir l'URL suivante (n'oubliez pas d'allumer votre serveur Wamp) :
+
+```
+http://localhost/sf3/web/app_dev.php/liste
+ou
+http://localhost/sf3/web/app_dev.php/formulaire
+```
+Et voilà, le tour est joué ! Vous devriez avoir accès au projet. Maintenant, lisez bien les commentaires dans le code ! Ils vous aideront à mieux comprendre.
