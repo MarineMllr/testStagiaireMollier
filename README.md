@@ -65,4 +65,6 @@ http://localhost/testStagiaireMollier-master/testStagiaireMollier-master/web/app
 Et voilà, le tour est joué ! Vous devriez avoir accès au projet. Maintenant, lisez bien les commentaires dans le code ! Ils vous aideront à mieux comprendre.
 Pour avoir une idée du projet, vous devriez avoir un formulaire de ce type :
 
-![Formulaire](https://i.imgur.com/LVnc2Dx.png)
+![Liste](https://i.imgur.com/m2aZuvv.png)
+
+![Formulaire](https://i.imgur.com/PAdqSVG.png)
