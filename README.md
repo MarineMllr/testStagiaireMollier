@@ -28,34 +28,38 @@ Pour ce test, j'ai fait le choix d'opter pour Wamp pour héberger en localhost m
 
 #### composer
 
-Pour commencer, notre projet a des « dépendances ». Elles doivent être chargées au travers des gestionnaires dont le projet a besoin. Nous devons ainsi lancer les commandes suivantes sur le cmd (en se  plaçant au préalable dans le dossier du projet):
+Pour commencer, notre projet a des « dépendances ». Elles doivent être chargées au travers des gestionnaires dont le projet a besoin. Nous devons ainsi lancer les commandes suivantes sur le cmd (en se  plaçant au préalable dans le dossier du projet : C:\wamp\www\testStagiaireMollier-master\testStagiaireMollier-master):
 
 ```
-php composer.phar install
+composer install
 ```
+
+Cette opération peut prendre quelques minutes.
+À noter qu'à un moment, on vous demandera des paramètres comme l'hôte de la base de donnée, le port, le nom de la base de données... faites simplement Entrer pour laisser les paramètres par défaut.
 
 ### base de données MySQL
 
 Pour que la base de données soit opérationnelle, rendez vous d'abord dans le fichier app/config/parameters.yml et renseignez les lignes suivantes :
 
 ```php
-database_name: Parking    # à remplacer par le nom de votre db
+database_name: Parking    # à remplacer par le nom de votre db (créer une db si cela n'est pas encore fait)
 database_user: root   # à remplacer par l’utilisateur de votre db
 database_password: null    # à remplacer par le mot de passe de votre db
 ```
 
+À noter que l'étape précédente aurait pu très bien se faire dans le cmd lors de l'installation de composer.
 Une fois cela fait, vous n'avez plus qu'à créer votre base de données à partir de l'entité Parking stockée dans src/AppBundle/Entity/Parking en tapant la commande suivante (placez-vous au préalable dans le dossier du projet lorsque vous êtes sur le cmd)
 
 ```
-php app/console doctrine:database:create
+php bin/console doctrine:schema:create
 ```
 ### accès à mon projet
 
 Vous n'avez plus qu'à vous rendre sur votre navigateur web puis de saisir l'URL suivante (n'oubliez pas d'allumer votre serveur Wamp) :
 
 ```
-http://localhost/sf3/web/app_dev.php/liste
+http://localhost/testStagiaireMollier-master/testStagiaireMollier-master/web/app_dev.php/formulaire
 ou
-http://localhost/sf3/web/app_dev.php/formulaire
+http://localhost/testStagiaireMollier-master/testStagiaireMollier-master/web/app_dev.php/liste
 ```
 Et voilà, le tour est joué ! Vous devriez avoir accès au projet. Maintenant, lisez bien les commentaires dans le code ! Ils vous aideront à mieux comprendre.
